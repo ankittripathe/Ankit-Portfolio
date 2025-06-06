@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Tilt } from "react-tilt";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { styles } from "../styles";
-import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
+import { ExternalLink } from "lucide-react";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -36,10 +36,10 @@ const ProjectCard = ({
         y: 0,
         scrollTrigger: {
           trigger: el,
-          start: "top bottom",  // Trigger when the top of the element hits the bottom of the viewport
-          end: "top center",    // End when the top reaches the center of the viewport
-          scrub: true,          // Smoothly sync scroll and animation
-          markers: false,       // Set to `true` to see debug markers
+          start: "top bottom", // Trigger when the top of the element hits the bottom of the viewport
+          end: "top center", // End when the top reaches the center of the viewport
+          scrub: true, // Smoothly sync scroll and animation
+          markers: false, // Set to `true` to see debug markers
         },
       }
     );
@@ -55,23 +55,22 @@ const ProjectCard = ({
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div className="relative w-full h-[230px]">
+        <div className="relative w-full h-[230px] flex justify-center items-center">
           <img
             src={image}
             alt="project_image"
-            className="w-full h-full object-cover object-left rounded-2xl"
+            className="w-full h-full rounded-2xl object-cover object-top"
           />
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              className="bg-blue-700 w-16 h-16 rounded-full flex justify-center items-center cursor-pointer flex-col"
             >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
+              <a href="" target="_blank" rel="noopener noreferrer">
+                <ExternalLink size={26} />
+              </a>
+              <p className="text-xs">Live</p>
             </div>
           </div>
         </div>
@@ -111,7 +110,7 @@ const Works = () => {
         stagger: 0.1, // Stagger delay of 0.3 seconds between each card
         scrollTrigger: {
           trigger: ".works-container",
-          start: "top bottom",  // Trigger when the top of the container reaches the bottom
+          start: "top bottom", // Trigger when the top of the container reaches the bottom
           end: "top center",
           scrub: true,
           markers: false, // Set to true to see debug markers
@@ -129,7 +128,11 @@ const Works = () => {
 
       <div className="w-full flex">
         <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
+          Following projects showcase my skills and experience through
+          real-world examples of my work. Each project is briefly described with
+          links to code repositories and live demos. It reflects my ability to
+          solve complex problems, work with different technologies, and manage
+          projects effectively.
         </p>
       </div>
 

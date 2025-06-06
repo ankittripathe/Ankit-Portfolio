@@ -1,3 +1,4 @@
+import { color } from "framer-motion";
 
 import {
   logo,
@@ -9,17 +10,12 @@ import {
   menu,
   close,
   css,
-  gearXpert,
+  trendWear, // project-1
   project2,
   project3,
-  mysql,
   express,
-  aws,
   mui,
-  
-  gsap,
   framer,
-  figma,
   git,
   html,
   javascript,
@@ -32,20 +28,20 @@ import {
   firstTestimonial,
   secondTestimonial,
   thirdTestimonial,
-} from '../assets'
-
+} from "../assets";
 
 // Import Tekisky separately
 import tekisky from "../assets/company/tekisky.png";
-
+import nexusHome from "../assets/nexusHome.PNG";
 
 export const navLinks = [
-
-
+  {
+    id: "home",
+    title: "Home",
+  },
   {
     id: "about",
     title: "About",
-    
   },
   {
     id: "work",
@@ -57,6 +53,7 @@ export const navLinks = [
   },
 ];
 
+// services
 const services = [
   {
     title: "Full-Stack Developer",
@@ -76,82 +73,75 @@ const services = [
   },
 ];
 
+// Technologies
 const technologies = [
   {
     name: "HTML 5",
     icon: html,
   },
+
   {
     name: "CSS 3",
     icon: css,
   },
+
   {
     name: "JavaScript",
     icon: javascript,
   },
+
   {
     name: "React JS",
     icon: reactjs,
   },
+
   {
-    name: "gsap",
-    icon: gsap,
+    name: "Redux Toolkit",
+    icon: redux,
   },
+
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+
+  {
+    name: "Material Ui",
+    icon: mui,
+  },
+
   {
     name: "framer",
     icon: framer,
   },
 
- 
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Material Ui",
-    icon: mui,
-  },
   {
     name: "Node JS",
     icon: nodejs,
   },
+
   {
     name: "Express Js",
     icon: express,
   },
-  {
-    name: "AWS",
-    icon: aws,
-  },
+
   {
     name: "MongoDB",
     icon: mongodb,
-  },
-  {
-    name: "MySql",
-    icon: mysql,
   },
 
   {
     name: "git",
     icon: git,
   },
- 
 
+  {
+    name: "github",
+    icon: github,
+  },
 ];
 
+// Experiences
 const experiences = [
   {
     title: "Full-Stack Developer",
@@ -168,6 +158,7 @@ const experiences = [
   },
 ];
 
+// Testimonials
 const testimonials = [
   {
     testimonial:
@@ -195,54 +186,74 @@ const testimonials = [
   },
 ];
 
+// Projects
 const projects = [
   {
-    name: "Tekisky Mart",
-    description:
-      "Tekisky Mart is a web-based platform that allows users to search, explore, and purchase a wide range of products from various providers, offering a seamless and efficient shopping experience.",
+    name: "TrendWear",
+    description: "TrendWear is a modern online fashion platform where you can easily browse and shop the latest styles from top brands. Enjoy curated collections and a seamless shopping experience in one stylish place.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "tailwind",
-        color: "white-text-gradient",
+        name: "react router",
+        color: "green-text-gradient",
       },
       {
-        name: "node",
+        name: "react hook form",
         color: "pink-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: "react icons",
+        color: "yellow-text-gradient",
       },
- 
+      {
+        name: "context api",
+        color: "purple-text-gradient",
+      },
+      {
+        name: "material ui",
+        color: "red-text-gradient",
+      },
     ],
-    image: project2,
-    source_code_link: "https://github.com/",
+    image: trendWear,
+    source_code_link: "https://trendwear-clothingsite.vercel.app/",
   },
+
   {
-    name: "GearXpert",
-    description:
-      "GearXpert is your ultimate destination for premium auto parts and accessories, Whether you're an automobile enthusiast or a professional, find everything you need to upgrade, repair.",
+    name: "NexusHome",
+    description: "NexusHome is a cutting-edge real estate online platform that makes it easy to browse, discover, and purchase your dream home. Explore trusted listings in prime locations with a seamless, user-friendly experience",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "emailJs",
+        name: "react router",
         color: "green-text-gradient",
       },
       {
-        name: "Gsap",
+        name: "react toastify",
         color: "pink-text-gradient",
       },
+      {
+        name: "tailwindcss",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "framer motion",
+        color: "purple-text-gradient",
+      },
+      {
+        name: "Web3Forms",
+        color: "red-text-gradient",
+      },
     ],
-    image: gearXpert,
-    source_code_link: "https://github.com/",
+    image: nexusHome,
+    source_code_link: "https://nexushome-realstate.vercel.app/",
   },
+
   {
     name: "GoGroove-Ecommerce",
     description:
